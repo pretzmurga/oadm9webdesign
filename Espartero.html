@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile | James Laurence M Espartero</title>
+    <link rel="stylesheet" href="Espartero.css">
+</head>
+<body>
+
+<div id="personal-website">
+    <nav class="navbar">
+        <div style="font-weight: bold; font-size: 18px;">JL Workspace</div>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="switchTab(event, 'about')">About Me</button>
+            <button class="nav-btn" onclick="switchTab(event, 'edu')">Education & Contact</button>
+            <button class="nav-btn" onclick="switchTab(event, 'office')">Office Admin</button>
+            <button class="nav-btn" onclick="switchTab(event, 'gallery')">Gallery</button>
+            <!-- NEW: Added Logout Button here -->
+            <button class="logout-btn" onclick="logoutAccount()">Log out</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- SECTION: ABOUT -->
+        <section id="about" class="web-section active-section">
+            <div class="card profile-card">
+                <div class="profile-pic-container">
+                    <img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-1/615012177_892068366533676_4291356063474337002_n.jpg?stp=dst-jpg_tt6&cstp=mx1365x1376&ctp=s200x200&_nc_cat=101&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeHbcFL-0FZkWFN3Y7L_90maoZLkVmScrOWhkuRWZJys5Sg-F56tFk_DwEy05fU-G90aO3EL-jli5qrJemdKXZyw&_nc_ohc=XGjwTKWghIwQ7kNvwFWxirp&_nc_oc=AdqxUxu3oFYCLrqiLlyhhg8jiyk3um_ZbIna6Za0LvoKIQ721SJiqVEEa3wQ4FfZMDk&_nc_zt=24&_nc_ht=scontent.filo2-1.fna&_nc_gid=zzlA4_h8Z63tdXBcRw13og&_nc_ss=7b2a8&oh=00_Af-JqLxE6IN4so3pRWPoKMEFwyP215E46q8GLdULKic67A&oe=6A2DD366" alt="James Larence M. Espartero">
+                </div>
+                <div>
+                    <h1 style="margin-top: 0; margin-bottom: 10px;">Welcome to my Digital Profile!</h1>
+                    <h2 id="full-name" style="margin: 0; color: var(--discord-blurple); font-size: 28px;">James Laurence M. Espartero</h2>
+                    <p id="course-year" style="font-weight: bold; margin-top: 8px; margin-bottom: 0;">BS in Office Administration - 2nd Year</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Short Introduction</h3>
+                    <p> I am a student focused on learning and developing knowledge and skills. My goal is to complete academic requirements, improve my abilities, and prepare for future opportunities.</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Background</h3>
+                    <p> I am a hardworking student who is committed to learning and achieving my goals. I value education, responsibility, and perseverance. Through dedication and effort, I continue to improve my skills and gain knowledge for my future.
+</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Hobbies & Interests</h3>
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Fishing</li>
+                        <li>Cycling</li>
+                        <li>Basketball</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Skills & Talents</h3>
+                    <ul>
+                        <li>Time management</li>
+                        <li>Teamwork</li>
+                        <li>Singing</li>
+                        <li>Drawing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="border-left-color: var(--success-green);">
+                <h3>Career Goals</h3>
+                <p>> My career goal is to become a successful businessman by developing strong leadership, management, and decision-making skills. I aim to build a stable business, create opportunities for others, and achieve financial success through hard work and dedication.</p>
+
+            </div>
+        </section>
+
+        <!-- SECTION: EDUCATION & CONTACT -->
+        <section id="edu" class="web-section">
+            <div class="grid">
+                <div class="card">
+                    <h2>Educational Background</h2>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Elementary:</strong>
+                        <p style="margin: 0;">Barbaza Central School (2013 - 2018)</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>High School:</strong>
+                        <p style="margin: 0;">Barbaza National High School (2018 - 2022)</p>
+                    </div>
+                    <div>
+                        <strong>College:</strong>
+                        <p style="margin: 0;">University of Antique (Present)</p>
+                    </div>
+                    <h3 style="margin-top: 25px;">Awards & Achievements</h3>
+                    <p>• Dean's Lister (First & Second Year)<br>• Most Organized Student Award 2023<br>• Certification in Advanced Word Processing</p>
+                </div>
+
+                <div class="card">
+                    <h2>Contact Me</h2>
+                    <p><strong>Email:</strong> jamesespartero@gmail.com</p>
+                    <p><strong>Mobile:</strong> +63 9978890063</p>
+                    <p><strong>Socials:</strong> <a href="#" style="color: var(--discord-blurple)">LinkedIn</a> | <a href="#" style="color: var(--discord-blurple)">Facebook</a></p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can I help you?"></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: OFFICE ADMIN -->
+        <section id="office" class="web-section">
+            <div class="card" style="text-align: center;">
+                <h1>The Power of Office Administration</h1>
+                <p>Major: Bachelor of Science in Office Administration (BSOA)</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Core Topics</h3>
+                    <p>Office Administration is the management of daily office operations to ensure efficiency, organization, and productivity in a workplace. It involves handling administrative tasks such as communication, record keeping, scheduling, document management, customer service, office technology, and coordination of resources.</p>
+
+                </div>
+                <div class="card">
+                    <h3>Why It Matters</h3>
+                    <p>Office Administration is important because it helps organizations operate smoothly and efficiently. Administrative professionals coordinate communication, manage records, organize schedules, and support daily business activities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Career Opportunities</h3>
+                <p>Office Administration offers career opportunities such as administrative assistant, office clerk, executive assistant, office administrator, records officer, receptionist, data entry specialist, customer service representative, administrative coordinator, and office manager.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: GALLERY -->
+        <section id="gallery" class="web-section">
+            <h2>Activity Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/611463555_122155434470638916_8801074525674474389_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFefXeSZX1V76Qp99khOIdQ1m7GVi5al_bWbsZWLlqX9gjVAzYn3u0IVjTNEp6v0B52ovcdjFGB-MRC_9BhhIWp&_nc_ohc=L6W2hNz7NhYQ7kNvwH4W1Fe&_nc_oc=AdoWG6s5t17FacjRF2bQuTOH7TMW34tjjX2_oRlx_QIAuyH6cFBaCF_pcGhVY9lhP_Y&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=Z5d7BKV1tZuCBpPN_rkMnA&_nc_ss=7b2a8&oh=00_Af975lb3rmRQgJbaLVA1aaktOY1n9tb0x33YiPPTrSXQnw&oe=6A2DD736"><p>Siminar On Work Ethics</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/719492548_1009229034817608_6739429593908297231_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1080x767&ctp=s1080x767&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGjUjMi-zTloss6hrcR3jOChj_YgyA9prKGP9iDID2mspvDdXWJIYwAjpxFk7PDdhUIHc15iUNSgKOhnOdK8S_6&_nc_ohc=v-IJb7Li59QQ7kNvwFlUlKe&_nc_oc=Ado6-LcwsorkZiU-m90ksBTOnjd6NACPYuUDMhXwgcVaJr3aHir8H6TaE7I5Nuo0DyY&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=0BOQhKh5Nelpiv9OmAWV-w&_nc_ss=7b2a8&oh=00_Af-CcsnK7yrRD8w151jHDJqmOvWwvx2cvAibRD0v2XWtpg&oe=6A2DCD64" alt="Group"><p>Tesda</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/614647785_122155998974638916_2110671567267157041_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHoihVKZ49IfHxrwWlatLUqzD_5SA4uRbHMP_lIDi5Fsb8dRQ7_9DoPwNX6sn0ZdiNEIE6deos-_Hiu1pWxQlit&_nc_ohc=zThCGUUxrpQQ7kNvwHb4Xow&_nc_oc=AdqxI84ViBJp--gi77TTKZb2WjpM33rN8NXGpwFaYBw5F4xHIxBGXZBHM4e886FfDy0&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=cZZ1lHPP2dDzlGFXVF7ybw&_nc_ss=7b2a8&oh=00_Af8aNkaTkb4eccz4xlwL9_0Siht_jciZwTCkz182iV1Xww&oe=6A2DF9D4" alt="Cert"><p>Factory Visit</p></div
+                >
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/502532622_122133468416638916_6260048875346756720_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEn_PxkeyCX7G4n1yILVEfGZPRieIDFUDlk9GJ4gMVQOdpvfsz8acqKkBVfn_SjsDZpVILtyREeuIJBTBGxv8-Y&_nc_ohc=G5TIcJ7arHEQ7kNvwG17cUt&_nc_oc=AdpRbgm6R9yb890RwVqNzaIsnOZu2xGCN21nyXw_Mj8IUjHSyWqL5GCqmWVfyYUGlFY&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=R7Z2QhLCwpRYU30xUdYm2Q&_nc_ss=7b2a8&oh=00_Af8AuvbWkvoYKkFDsEafvPc083I0Gfgybd8JOrIzgnDsOQ&oe=6A2DEBDA" alt="Cert"><p>CWTS</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/470720360_122110714526638916_8445557279049716206_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFwjeyU8UFtTsD9COJ4uTwitrv2OqCMXQK2u_Y6oIxdApbkusFPO13FBMwPcYi3FABOYElC8lJkfilC99lUi6L9&_nc_ohc=OwqC3CB2PmcQ7kNvwHVQqCv&_nc_oc=Adrl0eKjjMEiklxumk3My3euHOhgVe2XI2QK-GqHrAj0F00A3ybBJUCOyB2WIdYPrrs&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=PEYR5MvXQrR7EpGReuxiwA&_nc_ss=7b2a8&oh=00_Af_gl9MbbIhLukelUcZedwsNO16ydhiyVwa_YUSyGQ9lpg&oe=6A2DF9BF" alt="Cert"><p>JES Competition Skills</p></div
+             </div>
+             <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/472788426_122114057546638916_5472659996766032373_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFc89n-mxiR_fb8KF-RK69bhXo5pKOeAX6Fejmko54Bfg1qudRqkCof287JhpC6VVJLqdvHF64m4DyL8BUOLvK6&_nc_ohc=PesQk9gSStkQ7kNvwEvoET9&_nc_oc=Adrj81j4QZ1Z-QR0qlIsOc6Yj7Dyl-XVyQgjFfs_zDgiZ0cq6NJzjUmN87XZK6LIlHA&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=EaCZ5294163VilhEEpt1IQ&_nc_ss=7b2a8&oh=00_Af8-LBvyZpnkfAZEafDifT2L3ToFkO6At-AIN5GuymAupg&oe=6A2DDB83" alt="Cert"><p>Special Class Day</p></div
+             </div>
+        </section>
+    </div>
+</div>
+
+<script src="Espartero.js"></script>
+
+</body>
+</html>

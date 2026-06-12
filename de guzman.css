@@ -1,0 +1,182 @@
+:root {
+            --bg-color: #313338;
+            --card-bg: #2b2d31;
+            --discord-blurple: #5865F2;
+            --text-white: #f2f3f5;
+            --text-muted: #b5bac1;
+            --hover-bg: #35373c;
+            --input-bg: #1e1f22;
+            --success-green: #23a55a;
+            --danger-red: #ed4245;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'gg sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: var(--text-white);
+        }
+
+        /* --- DASHBOARD NAVIGATION --- */
+        .navbar {
+            background-color: var(--card-bg);
+            padding: 0 40px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links { display: flex; gap: 10px; align-items: center; }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .nav-btn.active, .nav-btn:hover {
+            background-color: var(--hover-bg);
+            color: var(--text-white);
+        }
+
+        /* NEW: Logout Button Style matching Discord's danger profile styling */
+        .logout-btn {
+            background-color: transparent;
+            border: 1px solid var(--danger-red);
+            color: var(--danger-red);
+            padding: 6px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--danger-red);
+            color: white;
+        }
+
+        /* --- CONTENT STYLING --- */
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .web-section { display: none; animation: fadeIn 0.3s ease; }
+        .active-section { display: block; }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--discord-blurple);
+        }
+
+        /* Profile Card Layout */
+        .profile-card {
+            display: flex; 
+            gap: 40px; 
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* Profile Image Container */
+        .profile-pic-container {
+            width: 160px; 
+            height: 160px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            flex-shrink: 0;
+            box-shadow: 0 0 0 6px rgba(88, 101, 242, 0.15); 
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        h1, h2, h3 { color: var(--text-white); }
+        p { color: var(--text-muted); line-height: 1.6; }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            background: var(--input-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        /* Form */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--input-bg);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            background: var(--discord-blurple);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .navbar {
+                padding: 0 15px;
+            }
+        }

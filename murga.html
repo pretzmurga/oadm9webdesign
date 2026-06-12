@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile | Pretz Ge Murga</title>
+    <link rel="stylesheet" href="murga.css">
+</head>
+<body>
+
+<div id="personal-website">
+    <nav class="navbar">
+        <div style="font-weight: bold; font-size: 18px;">Pretz Workspace</div>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="switchTab(event, 'about')">About Me</button>
+            <button class="nav-btn" onclick="switchTab(event, 'edu')">Education & Contact</button>
+            <button class="nav-btn" onclick="switchTab(event, 'office')">Office Admin</button>
+            <button class="nav-btn" onclick="switchTab(event, 'gallery')">Gallery</button>
+            <!-- NEW: Added Logout Button here -->
+            <button class="logout-btn" onclick="logoutAccount()">Log out</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- SECTION: ABOUT -->
+        <section id="about" class="web-section active-section">
+            <div class="card profile-card">
+                <div class="profile-pic-container">
+                    <img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/618575151_2109310949609572_7012782407279251197_n.jpg?stp=dst-jpg_tt6&cstp=mx1920x1930&ctp=s1920x1930&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE1DYl_f_-YRuZ-fjlnVZqiQZU_fpatIsBBlT9-lq0iwBLEsWqAlP4HDZihdq8MmsmIgNbCMeQkB3lfUkXX6hE8&_nc_ohc=EIbVx_zdOPIQ7kNvwEvVYxI&_nc_oc=AdqVNdefGuRazogbVTsP2IsvtF4Wftzapngmk3lWjof4yVU03rbADkLKl0rnsopxY4Q&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=ovfqFEMGxMhbmUYaXBqkcA&_nc_ss=7b2a8&oh=00_Af8iKLaqWrUOLrEDuM9xeIl22uze5crsBHIQHEL76Y852Q&oe=6A2DBCC6" alt="Pretz Ge Murga">
+                </div>
+                <div>
+                    <h1 style="margin-top: 0; margin-bottom: 10px;">Welcome to my Digital Profile!</h1>
+                    <h2 id="full-name" style="margin: 0; color: var(--discord-blurple); font-size: 28px;">Pretz Ge A. Murga</h2>
+                    <p id="course-year" style="font-weight: bold; margin-top: 8px; margin-bottom: 0;">BS in Office Administration - 2nd Year</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Short Introduction</h3>
+                    <p>I am a dedicated student with a passion for streamlining office workflows and leveraging technology to improve organizational productivity. I thrive in dynamic environments where detail-orientation is key.</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Background</h3>
+                    <p>Growing up with a keen interest in how businesses operate, I've always been the "organizer" in my peer groups. This natural inclination led me to pursue a degree that blends management with executive support.</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Hobbies & Interests</h3>
+                    <ul>
+                        <li>Gaming</li>
+                        <li>Travel</li>
+                        <li>Learning New Skills</li>
+                        <li>Personal Development</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Skills & Talents</h3>
+                    <ul>
+                        <li>Communication Skills</li>
+                        <li>Time Management</li>
+                        <li>Dancing</li>
+                        <li>Writing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="border-left-color: var(--success-green);">
+                <h3>Career Goals</h3>
+                <p>My ultimate goal is to become a Lead Executive Assistant or an Office Manager in a multinational tech firm, where I can implement green office initiatives and digital-first filing systems.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: EDUCATION & CONTACT -->
+        <section id="edu" class="web-section">
+            <div class="grid">
+                <div class="card">
+                    <h2>Educational Background</h2>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Elementary:</strong>
+                        <p style="margin: 0;">A.Bonifacio Integrated school (2010 - 2016)</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>High School:</strong>
+                        <p style="margin: 0;">Belison National School (2016 - 2022)</p>
+                    </div>
+                    <div>
+                        <strong>College:</strong>
+                        <p style="margin: 0;">University of Antique (Present)</p>
+                    </div>
+                    <h3 style="margin-top: 25px;">Awards & Achievements</h3>
+                    <p>• Dean's Lister (First & Second Year)<br>• Most Organized Student Award 2023<br>• Certification in Advanced Word Processing</p>
+                </div>
+
+                <div class="card">
+                    <h2>Contact Me</h2>
+                    <p><strong>Email:</strong> pretzmurga@gmail.com</p>
+                    <p><strong>Mobile:</strong> +63 912 345 6789</p>
+                    <p><strong>Socials:</strong> <a href="#" style="color: var(--discord-blurple)">LinkedIn</a> | <a href="#" style="color: var(--discord-blurple)">Facebook</a></p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can I help you?"></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: OFFICE ADMIN -->
+        <section id="office" class="web-section">
+            <div class="card" style="text-align: center;">
+                <h1>The Power of Office Administration</h1>
+                <p>Major: Bachelor of Science in Office Administration (BSOA)</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Core Topics</h3>
+                    <p>Our curriculum covers Shorthand, Office Procedures, Records Management, and Business Communication. We learn how to be the backbone of any corporate entity.</p>
+                </div>
+                <div class="card">
+                    <h3>Why It Matters</h3>
+                    <p>Without proper administration, communication fails and productivity halts. We ensure the bridge between management and execution remains solid and efficient.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Career Opportunities</h3>
+                <p>BSOA graduates can excel as Executive Assistants, Administrative Managers, Customer Relations Officers, and Human Resource Assistants across all industries.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: GALLERY -->
+        <section id="gallery" class="web-section">
+            <h2>Activity Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/615477346_122155857248638916_1576513720735238850_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEALfuA6D5SEk3tn5002OjyTHewZbJzZ01Md7BlsnNnTYzl-ZFnulh2uCB_Yyml6ASe98jla2MIkEr1mg6iV2FA&_nc_ohc=X-d0XzS3_CsQ7kNvwFhEne-&_nc_oc=Adr4ollH9zXV717hG1MXMABFq8BL2E0h2QvTD2hfYaotRbsrU0Ya5t8HEy29NupClQQ&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=__-Luh7UViyY8H86oWqL0g&_nc_ss=7b2a8&oh=00_Af8ChFfTSfHzVqaCHgExEt10lkvnsutmwvSq6WOYwYqo7w&oe=6A2DC0D0" alt="Seminar"><p>𝑳𝒖𝒏𝒆𝒕𝒂 𝑷𝒂𝒓𝒌</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/615557036_122155861640638916_7522617195652333396_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEa5hZMWN04k4l5SYFTmL6G1YaCtF-1SVvVhoK0X7VJWy4e54GoVpNzD88cj0WM8YPJipGDK4NXZsltuSQO_Xj-&_nc_ohc=I8maQG5CAhEQ7kNvwE69UZe&_nc_oc=AdprkMTumWhsDSdLgZHal1yjqrvP4drbHDtG-U7tqMmuoPaM3xoqk_WMWL2mEs7D4SY&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=PYmHgqFMH00Nqu-VFsRh0g&_nc_ss=7b2a8&oh=00_Af9Pia933CRn1RZ-Qmy1KhpQi1xL1iHKCl_3ZSkSIo9ZtQ&oe=6A2DD65A" alt="Award"><p>𝑴𝒂𝒏𝒊𝒍𝒂 𝑪𝒂𝒕𝒉𝒆𝒅𝒓𝒂𝒍</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/615867642_122156064704638916_7794783044137467642_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEC38AQ6gOJxmqjhGJmDTAPfVDjbh6xcRt9UONuHrFxG19TQ15OL9YYR-tiPatVpc-n_-gZLMin_w0mjxrWKF6s&_nc_ohc=z1TGlaWduo4Q7kNvwHreXgW&_nc_oc=AdreCKEeiOnwDNmyAwLMoh2yjblFVFI2PBm-dlSPxqyxlQ0DOmMPJm5t_Xc0kS4WVS8&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=JOmvoPD2BeQ1PmoyReL5Yw&_nc_ss=7a2a8&oh=00_Af8QCPcvCmgdjEzf4x5BahS2ZSWg8YKTxLlgxAUfNdJpDQ&oe=6A2DE33D" alt="Activity"><p>𝑲𝒂𝒑𝒊𝒕𝒂𝒏 𝑴𝒐𝒚 𝑨𝒏𝒄𝒆𝒔𝒕𝒓𝒂𝒍 𝑯𝒐𝒖𝒔𝒆</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/615338114_122155999022638916_6753423445354901759_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGDON3VH3cc6vLQU5SiD_o5n8L2KvvVQ02fwvYq-9VDTQc6x6BXv63FGrqF17FdV7zAdNDpdprLdS4108jpQB44&_nc_ohc=EigVYoBy7PEQ7kNvwH3wJOn&_nc_oc=AdrjNAEq2LrAuc7CeKF9gCFHxb8k3QJB-wZdWdy2bNGi-UxVT20UltGZfa2Vq0rPzi0&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=n5xzrHDpuHuJwg67vZoiXw&_nc_ss=7b2a8&oh=00_Af9O3LnkopaYbJXesrsE6PcVk8tR9uq4gs6RcpbFb5aZ_w&oe=6A2DCAA4" alt="Lab"><p>𝑮𝒂𝒓𝒅𝒆𝒏𝒊𝒂 𝑳𝒂𝒈𝒖𝒏𝒂 𝑭𝒂𝒄𝒕𝒐𝒓𝒚 </p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/615156355_122155926236638916_5163766294581357494_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFxzU520nVNQtQlRT4OLe0YI2jXjx2YFXkjaNePHZgVeZt5Hs5cLnVmNNeE7GqI2Ja5MIvJag_PVnnufVoQjHhd&_nc_ohc=4zoXHrEJ22sQ7kNvwGP4vGs&_nc_oc=AdpmAjeWo67PlOpMFl-KyDHeH21FrtSzN_QzFvm8UWkreOr1EwBe8Ggo5ulneQgSCPo&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=PGq59ZKn9H2Z_xULXeAryw&_nc_ss=7b2a8&oh=00_Af9PQy79iDxPho3BCQjN17XKCginq5phmoitOo54g-IL1g&oe=6A2DBE77" alt="Seminar"><p>𝒀𝒂𝒌𝒖𝒍𝒕 𝒇𝒂𝒄𝒕𝒐𝒓𝒚</p></div>
+                <div class="gallery-item"><img src="https://scontent.filo2-1.fna.fbcdn.net/v/t39.30808-6/589176183_122156022824638916_5749083302860942329_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEEpDXtyHUlmVvbJlEVQTkTXZGu4T4XWzJdka7hPhdbMgVKe-NHIQmeBeS1K9b6772L8HtdQeUSnInQMsnuIGx3&_nc_ohc=t44ebZGP0SMQ7kNvwEQs39l&_nc_oc=AdpBmOFanLorfUtB29MMSZqa-pk2eXVvLI3oL9Qkum7Idd1jvH9GMWccvLoBHCM-x1w&_nc_zt=23&_nc_ht=scontent.filo2-1.fna&_nc_gid=Cf2o7gQhIdYh8WmhFxq3zA&_nc_ss=7b2a8&oh=00_Af9H1oa5xFsr8keVL3lS_bQfiPzMFKxTbDS86cHqF6GzCQ&oe=6A2DBF9A" alt="Cert"><p>𝑷𝒊𝒏𝒐𝒚 𝑩𝒊𝒈 𝑩𝒓𝒐𝒕𝒉𝒆𝒓 𝒉𝒐𝒖𝒔𝒆</p></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="murga.js"></script>
+</body>
+</html>

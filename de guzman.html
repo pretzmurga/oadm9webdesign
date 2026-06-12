@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile | James De Guzman</title>
+    <link rel="stylesheet" href="de guzman.css">
+</head>
+<body>
+
+<div id="personal-website">
+    <nav class="navbar">
+        <div style="font-weight: bold; font-size: 18px;">JamesD Workspace</div>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="switchTab(event, 'about')">About Me</button>
+            <button class="nav-btn" onclick="switchTab(event, 'edu')">Education & Contact</button>
+            <button class="nav-btn" onclick="switchTab(event, 'office')">Office Admin</button>
+            <button class="nav-btn" onclick="switchTab(event, 'gallery')">Gallery</button>
+            <!-- NEW: Added Logout Button here -->
+            <button class="logout-btn" onclick="logoutAccount()">Log out</button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- SECTION: ABOUT -->
+        <section id="about" class="web-section active-section">
+            <div class="card profile-card">
+                <div class="profile-pic-container">
+                    <img src="https://scontent-mnl1-2.xx.fbcdn.net/v/t39.30808-6/588535851_1477563763314164_7790932968641091917_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFCroJp5HWxzyZtQUCAIEh2efXe7Rbu-KR59d7tFu74pPWU_k_f71ygog_KMmmg8pjRwgSjwRpAnnJBuzI3Clgs&_nc_ohc=1PlaubqXolEQ7kNvwHmgbJn&_nc_oc=AdpDP_WjLECrKz1RY0fKCGBMMvfpp7qiswgo74JAkLFZSj-EN6fk3ny2vD7kxG_7Amg&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_gid=4lqoJtzD3Te1Tr1t_X5nVQ&_nc_ss=7b2a8&oh=00_Af8PH2ipOssUO_NGtV7LkGSxJV1d2Qhltp3ZlnZLVJX1Lg&oe=6A24C504" alt="James De Guzman">
+                </div>
+                <div>
+                    <h1 style="margin-top: 0; margin-bottom: 10px;">Welcome to my Digital Profile!</h1>
+                    <h2 id="full-name" style="margin: 0; color: var(--discord-blurple); font-size: 28px;">James S. De Guzman</h2>
+                    <p id="course-year" style="font-weight: bold; margin-top: 8px; margin-bottom: 0;">BS in Office Administration - 2nd Year</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Short Introduction</h3>
+                    <p>I am a dedicated and enthusiastic student who is passionate about learning and personal growth. I am committed to developing my knowledge, skills, and abilities through academic studies and practical experiences. With a strong work ethic and a positive attitude, I strive to achieve my goals, contribute to my community, and prepare myself for future professional opportunities.
+</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Background</h3>
+                    <p>I am a hardworking and motivated individual who values learning, growth, and self-improvement. I enjoy taking on new challenges and developing skills that help me become a better person both academically and personally. I am dedicated to achieving my goals, building meaningful relationships, and making a positive contribution to my community. Through determination and perseverance, I continue to work toward a successful and fulfilling future.
+</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Hobbies & Interests</h3>
+                    <ul>
+                        <li>Sports</li>
+                        <li>Travel</li>
+                        <li>Gaming</li>
+                        <li>Fishing</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Skills & Talents</h3>
+                    <ul>
+                        <li>Communication Skills</li>
+                        <li>Problem-Solving Skills</li>
+                        <li>Leadership Skills</li>
+                        <li>Creativity and Innovation</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="border-left-color: var(--success-green);">
+                <h3>Career Goals</h3>
+                <p>My career goal is to build a successful and meaningful profession where I can apply my knowledge, skills, and talents to make a positive impact. I aim to continue learning, gain valuable experience, and grow both personally and professionally. Through hard work and dedication, I hope to achieve my aspirations and contribute to the success of my future organization and community.
+</p>
+            </div>
+        </section>
+
+        <!-- SECTION: EDUCATION & CONTACT -->
+        <section id="edu" class="web-section">
+            <div class="grid">
+                <div class="card">
+                    <h2>Educational Background</h2>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Elementary:</strong>
+                        <p style="margin: 0;">Barbaza Central School (2013 - 2018</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>High School:</strong>
+                        <p style="margin: 0;">Barbaza National High School (2018 - 2022)</p>
+                    </div>
+                    <div>
+                        <strong>College:</strong>
+                        <p style="margin: 0;">University of Antique (Present)</p>
+                    </div>
+                    <h3 style="margin-top: 25px;">Awards & Achievements</h3>
+                    <p>• With honors (Grade 11 & 12)<br>• Best in Cooperation award 2022<br>• Certificate of Participation in Seminar of Cooperative</p>
+                </div>
+
+                <div class="card">
+                    <h2>Contact Me</h2>
+                    <p><strong>Email:</strong> jamesdm@gmail.com</p>
+                    <p><strong>Mobile:</strong> +63 2763 354 4657</p>
+                    <p><strong>Socials:</strong> <a href="#" style="color: var(--discord-blurple)">LinkedIn</a> | <a href="#" style="color: var(--discord-blurple)">Facebook</a></p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can I help you?"></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: OFFICE ADMIN -->
+        <section id="office" class="web-section">
+            <div class="card" style="text-align: center;">
+                <h1>The Power of Office Administration</h1>
+                <p>Major: Bachelor of Science in Office Administration (BSOA)</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Core Topics</h3>
+                    <p>Our topics in office work include office management, communication skills, computer and digital applications, records and file management, and basic administrative tasks. These areas focus on developing the essential skills needed to perform efficiently in a workplace or business environment.
+</p>
+                </div>
+                <div class="card">
+                    <h3>Why It Matters</h3>
+                    <p>Understanding office-related skills is important because it helps maintain organization, improve communication, and increase productivity in the workplace. It also ensures that tasks are completed correctly and on time, supporting the overall success of the organization. These skills prepare individuals to handle real office responsibilities with confidence and professionalism.
+</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Career Opportunities</h3>
+                <p> As a Graduates of Office Administration can work in various office and business settings. Possible career paths include administrative assistant, office clerk, receptionist, executive assistant, data encoder, human resource assistant, and records or filing clerk. They can also work in government offices, private companies, schools, and corporate organizations where administrative and clerical support is needed.
+</p>
+            </div>
+        </section>
+
+        <!-- SECTION: GALLERY -->
+        <section id="gallery" class="web-section">
+            <h2>Activity Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://www.tesda.gov.ph/CMSFiles/News/20278/380386411_3538914906436991_3566666054792849928_n.jpg" alt="Seminar"><p>Attending Leadership Seminar</p></div>
+                <div class="gallery-item"><img src="https://scontent-mnl3-2.xx.fbcdn.net/v/t1.15752-9/715058190_1476137343697488_1064069730861865729_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGcq2Ws679vVQ0JjJVrCHAgLXUfj55UVI4tdR-PnlRUjjBKe2YyQHchmLYOpQEVbQPOn0AY6JAqaS7shzSBr1xJ&_nc_ohc=I3nGabm5JEYQ7kNvwFIcPH4&_nc_oc=Adp1FyxAX7z8ZbUaCyczEIkdTYWRrK9we6tgVzyvIDX_vPpDGsaSZ_XljqoJBciFcbQ&_nc_zt=23&_nc_ht=scontent-mnl3-2.xx&_nc_ss=7b2a8&oh=03_Q7cD5gH5cgDEheyi4uIEoEeMB_DDQwo98IBlffSOvA-WY7V1LQ&oe=6A47DD87" alt="Award"><p>PE Day Awarding</p></div>
+                <div class="gallery-item"><img src="https://scontent-mnl1-2.xx.fbcdn.net/v/t1.15752-9/610783382_861597603246491_5944480266933437130_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGlwQwj0RygCO_01K6HHiEI53ZytgxIOTrndnK2DEg5OoBZedavvj01-m_WvaFtuMzxXtE_0-xnkdF1PUF2-vQA&_nc_ohc=SE1jDc7Gyg8Q7kNvwGJqiQU&_nc_oc=AdrxuZyRBPvHcoQMekuFsrjbHv_ZgLAyKtNFOwJ_MMNLnvWnkXY26o9BjWoXdH-DuDc&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_ss=7b2a8&oh=03_Q7cD5gEtbOA6fULmQDQYwnXOR2kfqIU_sLjRA8LJQU_Doa_WHA&oe=6A47CE39" alt="Activity"><p>Educational Local Company Tour</p></div>
+                <div class="gallery-item"><img src="https://scontent-mnl1-2.xx.fbcdn.net/v/t1.15752-9/711445476_837413609442793_2316528394128489988_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGM1fOPlCmOITrRSzCtGmoDSKdwqmxb-t9Ip3CqbFv63z8luNVbfgjhcN4f8Qpq0l0VBZEMb4To2VxDGIcJmCau&_nc_ohc=bTha1i7jQUQQ7kNvwHFrvM2&_nc_oc=AdppQBRJ-zx10qr8GNgyNlFojOU-frqul91X3tLb-OszdaPSMe19M6fj8C6mTU7ALYM&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_ss=7b2a8&oh=03_Q7cD5gFnCtxl3yCbep1jigBhUg1IwUoP6v1pff_yj_ySHwP0Yg&oe=6A47D5F7" alt="Lab"><p>BSOAD Day</p></div>
+                <div class="gallery-item"><img src="https://scontent-mnl3-3.xx.fbcdn.net/v/t1.15752-9/711425482_2592013981254839_8494587316819157790_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEIK-zCi3ZRWpI1JJKvrgGVY93DPdAltJZj3cM90CW0luSx75o0Lp1WZqdWJ-13jJuUVyR2MPXMFO8MfFoDXziX&_nc_ohc=2Srj4V9GD4AQ7kNvwEJxynT&_nc_oc=Adrnkm8--RhEFSZowyM0QpPBuSXnjs1m4jCbAGZeA3xNVdprOY85nC79aKddFqui7PI&_nc_zt=23&_nc_ht=scontent-mnl3-3.xx&_nc_ss=7b2a8&oh=03_Q7cD5gFKVGgL-iqtKjkgfkJExjSbCaTV0zy8-4RqKekLP0_Uyg&oe=6A485987" alt="Group"><p>Tesda Certificate</p></div>
+                <div class="gallery-item"><img src="https://scontent-mnl3-3.xx.fbcdn.net/v/t1.15752-9/713363139_2052302685712315_7111317166682547457_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHF8PodVkqWsb-0i0yGC5xyhf06vMzcGPqF_Tq8zNwY-nVnrwWtgRqjp1b8OajkCb7v4H_s9AOdtS0uYJ1O-brO&_nc_ohc=RVI76Z1Q1yAQ7kNvwFnoNkE&_nc_oc=Adq0X5Vvi0qPcb4sKJY33V6CXjxaM1RBDursNUscInG6piXjLEVs_pW9Lrz7jpapgaI&_nc_zt=23&_nc_ht=scontent-mnl3-3.xx&_nc_ss=7b2a8&oh=03_Q7cD5gFARAbb1XYi1N1GY5_90vmN5-N3q1LxTQdhnb0EBKHvcA&oe=6A485F6C" alt="Cert"><p>Film Vedio Presentation</p></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="de guzman.js"></script>
+
+</body>
+</html>

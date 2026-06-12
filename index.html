@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord | Welcome</title>
+    <!-- ADD THIS LINE FOR THE TAB LOGO -->
+    <link rel="icon" type="image/x-icon" href="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- SECTION 1: AUTHENTICATION INTERFACE -->
+    <div id="auth-screen-wrapper">
+        <div class="bg-gradient"></div>
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+
+        <div class="auth-container">
+            <div class="logo-container">
+                <svg class="discord-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+                    <path fill="#5865F2" d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.66-10.85,68.43,68.43,0,0,1-10.51-5c.88-.65,1.73-1.34,2.54-2a74.57,74.57,0,0,0,72.76,0c.81.71,1.66,1.4,2.54,2a68.43,68.43,0,0,1-10.51,5,74.37,74.37,0,0,0,6.66,10.85,105.73,105.73,0,0,0,31-18.83C129.87,48.42,123.94,25.66,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.94,46,53.94,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.18,46,96.18,53,91,65.69,84.69,65.69Z"/>
+                </svg>
+            </div>
+
+            <div class="scrollable-content" id="scrollWrapper">
+                <!-- LOGIN LOGIC CORE -->
+                <div id="loginView">
+                    <h3>Welcome back!</h3>
+                    <p class="subtitle">We're so excited to see you again!</p>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <label>EMAIL OR PHONE NUMBER <span>*</span></label>
+                            <input type="text" id="emailField" required>
+                        </div>
+                        <div class="input-group">
+                            <label>PASSWORD <span>*</span></label>
+                            <input type="password" id="passwordField" required>
+                            <a href="#" class="link" style="display:block; margin-top:8px;">Forgot your password?</a>
+                        </div>
+                        <button type="submit" class="submit-btn">Log In</button>
+                        <div id="loginError" class="error-msg">Invalid email credentials or verification password.</div>
+                        <p class="switch-text">
+                            Need an account? <span class="link" onclick="toggleAuth()">Register</span>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- REGISTER SECTION -->
+                <div id="registerView" class="hidden">
+                    <h3>Create an account</h3>
+                    <p class="subtitle">Join the community today!</p>
+                    <form onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <label>EMAIL <span>*</span></label>
+                            <input type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>DISPLAY NAME</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group">
+                            <label>USERNAME <span>*</span></label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>PASSWORD <span>*</span></label>
+                            <input type="password" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Continue</button>
+                        <p class="switch-text">
+                            <span class="link" onclick="toggleAuth()">Already have an account?</span>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: PERSONAL WORKSPACE WEBSITE (HIDDEN BY DEFAULT) -->
+    <div id="personal-website" class="hidden">
+        <nav class="navbar">
+            <div style="font-weight: bold; font-size: 18px;">Pretz Workspace</div>
+            <div class="nav-right-side">
+                <div class="nav-links">
+                    <button class="nav-btn active" onclick="switchTab(event, 'about')">About Me</button>
+                    <button class="nav-btn" onclick="switchTab(event, 'edu')">Education & Contact</button>
+                    <button class="nav-btn" onclick="switchTab(event, 'office')">Office Admin</button>
+                    <button class="nav-btn" onclick="switchTab(event, 'gallery')">Gallery</button>
+                </div>
+                <button class="logout-btn" onclick="logoutAccount()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="main-container">
+            <section id="about" class="web-section active-section">
+                <div class="card profile-card">
+                    <div class="profile-pic-container">
+                        <img src="https://scontent.fcgy2-3.fna.fbcdn.net/v/t39.30808-1/618575151_2109310949609572_7012782407279251197_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGEh__sgC_mLAPWO1WKW90uQZU_fpatIsBBlT9-lq0iwPf6Gll-eN0IkzqM5VTsbW4tubvM8FUtdsjvxvC3PE7O&_nc_ohc=QgBqv82NDrwQ7kNvwH0P8JL&_nc_oc=Ado8eUOSWNlCYR2Qn84KoepXYGTAZsqjzgvR1Seb6esAaPj-qCHxqp3aPr3cCZf1zPk&_nc_zt=24&_nc_ht=scontent.fcgy2-3.fna&_nc_gid=NDjXZkWyaOAXveGaf_XkLA&_nc_ss=7b2a8&oh=00_Af5nr4ryUBdVdJQJGqDjEesWmsct7rNmNwLlPr932QMVUw&oe=6A207F88" alt="Pretz Ge Murga">
+                    </div>
+                    <div>
+                        <h1 style="margin-top: 0; margin-bottom: 10px;">Welcome to my Digital Profile!</h1>
+                        <h2 id="full-name" style="margin: 0; color: #5865F2; font-size: 28px;">Pretz Ge Murga</h2>
+                        <p id="course-year" style="font-weight: bold; margin-top: 8px; margin-bottom: 0;">BS in Office Administration - 3rd Year</p>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Short Introduction</h3>
+                        <p>I am a dedicated student with a passion for streamlining office workflows and leveraging technology to improve organizational productivity. I thrive in dynamic environments where detail-orientation is key.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Personal Background</h3>
+                        <p>Growing up with a keen interest in how businesses operate, I've always been the "organizer" in my peer groups. This natural inclination led me to pursue a degree that blends management with executive support.</p>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Hobbies & Interests</h3>
+                        <ul>
+                            <li>Digital Document Design</li>
+                            <li>Exploring Productivity Apps</li>
+                            <li>Strategic Board Games</li>
+                            <li>Photography</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Skills & Talents</h3>
+                        <ul>
+                            <li>Advanced Microsoft Office Suite</li>
+                            <li>Records & Database Management</li>
+                            <li>Event Coordination</li>
+                            <li>Fast & Accurate Keyboarding</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card" style="border-left-color: var(--success-green);">
+                    <h3>Career Goals</h3>
+                    <p>My ultimate goal is to become a Lead Executive Assistant or an Office Manager in a multinational tech firm, where I can implement green office initiatives and digital-first filing systems.</p>
+                </div>
+            </section>
+
+            <section id="edu" class="web-section">
+                <div class="grid">
+                    <div class="card">
+                        <h2>Educational Background</h2>
+                        <div style="margin-bottom: 15px;">
+                            <strong>Elementary:</strong>
+                            <p style="margin: 0;">Central Elementary School (2010 - 2016)</p>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <strong>High School:</strong>
+                            <p style="margin: 0;">City National High School (2016 - 2022)</p>
+                        </div>
+                        <div>
+                            <strong>College:</strong>
+                            <p style="margin: 0;">State University of Technology (Present)</p>
+                        </div>
+                        <h3 style="margin-top: 25px;">Awards & Achievements</h3>
+                        <p>• Dean's Lister (First & Second Year)<br>• Most Organized Student Award 2023<br>• Certification in Advanced Word Processing</p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Contact Me</h2>
+                        <p><strong>Email:</strong> pretz.ge@example.com</p>
+                        <p><strong>Mobile:</strong> +63 912 345 6789</p>
+                        <p><strong>Socials:</strong> <a href="#" style="color: #5865F2">LinkedIn</a> | <a href="#" style="color: #5865F2">Facebook</a></p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="How can I help you?"></textarea>
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="office" class="web-section">
+                <div class="card" style="text-align: center;">
+                    <h1>The Power of Office Administration</h1>
+                    <p>Major: Bachelor of Science in Office Administration (BSOA)</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Core Topics</h3>
+                        <p>Our curriculum covers Shorthand, Office Procedures, Records Management, and Business Communication. We learn how to be the backbone of any corporate entity.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Why It Matters</h3>
+                        <p>Without proper administration, communication fails and productivity halts. We ensure the bridge between management and execution remains solid and efficient.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Career Opportunities</h3>
+                    <p>BSOA graduates can excel as Executive Assistants, Administrative Managers, Customer Relations Officers, and Human Resource Assistants across all industries.</p>
+                </div>
+            </section>
+
+            <section id="gallery" class="web-section">
+                <h2>Activity Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/5865F2/FFFFFF?text=Seminar+2024" alt="Seminar"><p>Attending Leadership Seminar</p></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/23a55a/FFFFFF?text=Achievement+Award" alt="Award"><p>Dean's Lister Awarding</p></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/ed4245/FFFFFF?text=School+Activity" alt="Activity"><p>Annual Foundation Day</p></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/fee75c/333333?text=Office+Simulation" alt="Lab"><p>Office Management Simulation</p></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/9b5de5/FFFFFF?text=Group+Project" alt="Group"><p>Project Collaboration with Peers</p></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/300/00bbf9/FFFFFF?text=Certificate" alt="Cert"><p>IT Proficiency Certificate</p></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTROLLER SCRIPT -->
+    <script src="admin.js"></script>
+</body>
+</html>
